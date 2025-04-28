@@ -1,0 +1,44 @@
+﻿@page "/AddEmployee"
+
+<EditForm Model="@user">
+
+
+	<div class="mb-2 w-25">
+		<label for="email" class="form-label">Digite o Email:</label>
+		<InputText class="form-control" id="email" @bind-Value="@user.nome"></InputText>
+	</div>
+
+	<div class="mb-2 w-25">
+		<label for="username" class="form-label">Adicionar Usuario</label>
+		<InputText class="form-control" id="username" @bind-Value="@user.nome"></InputText>
+	</div>
+
+	<div class="mb-2 w-25">
+		<label for="password" class="form-label">Digite sua Senha:</label>
+		<InputText class="form-control" id="paswword" @bind-Value="@user.nome" type="password"></InputText>
+		
+	</div>
+
+	<div class="mb-2 w-25">
+		<label for="confirmPassword" class="form-label">Confirme a Senha:</label>
+		<InputText class="form-control" id="confirmPassword" @bind-Value="@user.nome" type="confirmPassword"></InputText>
+
+	</div>
+
+	<div class="mb-2 w-25">
+		<button class="btn btn-success">Confirmar</button>
+	</div>
+
+
+</EditForm>
+
+@code {
+
+	public class User
+	{
+		public string nome{ get; set; }
+	}
+
+	private User user = new User();
+
+}

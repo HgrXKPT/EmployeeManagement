@@ -1,0 +1,47 @@
+﻿<div class="top-row ps-3 navbar navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="">EmployeeManagement</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Home
+            </NavLink>
+        </div>
+        
+        <div class="nav-item px-3">
+            <!-- Link principal -->
+            <NavLink class="nav-link" href="/employees/list" data-bs-toggle="collapse" data-bs-target="#employeeActions" aria-expanded="false" aria-controls="employeeActions">
+                <span class="bi bi-person" aria-hidden="true"></span> Employees
+            </NavLink>
+
+            <!-- Barra expansível -->
+            <div class="collapse mt-2" id="employeeActions">
+                <div class="card card-body bg-transparent">
+                    <a href="/AddEmployee" class="btn btn-primary w-100 mb-2">Add Employee</a>
+                    <a href="" class="btn btn-secondary w-100 mb-2">Edit Employee</a>
+                    <a href="" class="btn btn-danger w-100">Delete Employee</a>
+                   
+                    
+                </div>
+            </div>
+        </div>
+
+
+
+        
+
+
+
+       
+       
+
+       
+    </nav>
+</div>
+
