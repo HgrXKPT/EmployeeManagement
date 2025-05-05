@@ -1,0 +1,43 @@
+﻿@page "/AddEmployee"
+@rendermode InteractiveServer
+
+<EditForm Model="@userDto" OnValidSubmit="AddUser" FormName="AddUserForm">
+
+
+	<div class="mb-2 w-25">
+		<label class="form-label">Digite o Nome:</label>
+		<InputText class="form-control" @bind-Value="userDto.Name"></InputText>
+	</div>
+
+	<div class="mb-2 w-25">
+		<label for="name" class="form-label">Digite o Rg:</label>
+		<InputText class="form-control" @bind-Value="userDto.Rg"></InputText>
+	</div>
+
+	<div class="mb-2 w-25">
+		<label class="form-label">Digite o Departamento:</label>
+		<InputText class="form-control"  @bind-Value="userDto.Departament"></InputText>
+	</div>
+
+	<div class="mb-2 w-25">
+		
+		<button class="btn btn-success" type="submit">Confirmar</button>
+	</div>
+
+	
+
+
+	<div>
+		<p>Nome: @userDto.Name</p>
+		<p>RG: @userDto.Rg</p>
+		<p>Departamento: @userDto.Departament</p>
+
+	</div>
+
+
+
+
+
+</EditForm>
+
+
