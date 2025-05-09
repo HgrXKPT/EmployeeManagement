@@ -1,0 +1,23 @@
+﻿@page "/DeleteUser"
+@rendermode InteractiveServer
+
+@if(@exibirFormulario){
+	<EditForm Model="@newUser" OnValidSubmit="DeleteUser">
+
+		<div class="mb-2 w-25">
+			<label class="form-label">Digite o RG do usuario que deseja Deletar:</label>
+			<InputText class="form-control" @bind-Value="newUser.Rg"></InputText>
+		</div>
+
+		<div class="mb-2 w-25">
+
+			<button class="btn btn-success" type="submit">Confirmar</button>
+		</div>
+
+	</EditForm>
+}
+else
+{
+	<h1>O Usuario Foi Deletado!!!</h1>
+}
+

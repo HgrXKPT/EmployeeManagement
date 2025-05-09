@@ -2,8 +2,13 @@
 
 namespace EmployeeManagement.DTOs.EmployeeDtos
 {
-    public class AddUserDto
+    public class EditUserDto
     {
+
+        public int Id
+        {
+            get; set;
+        }
         [Required]
         public string? Name
         {
@@ -11,17 +16,16 @@ namespace EmployeeManagement.DTOs.EmployeeDtos
         }
 
         [Required]
-        public string Rg
-        {
-            get; set;
-        }= string.Empty;
-
-        [Required]
-        public string? Departament
+        public string? Rg
         {
             get; set;
         }
 
+        public string? departament
+        {
+        
+        get; set;}
+
+
     }
-    
 }

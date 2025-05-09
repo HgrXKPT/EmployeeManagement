@@ -2,9 +2,9 @@
 {
     public class Users
     {
-        private string _name;
-        private string _rg;
-        private string _departament;
+        private string _name = string.Empty;
+        private string _rg = string.Empty;
+        private string _departament = string.Empty;
 
         public Users(string name, string rg, string departament) { 
             _name = name;
@@ -13,6 +13,11 @@
                 }
         public Users()
         {
+        }
+
+        public Users(string rg)
+        {
+            _rg = rg;
         }
 
         public int Id {get;set;}

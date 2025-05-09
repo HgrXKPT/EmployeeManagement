@@ -2,6 +2,7 @@
 using EmployeeManagement.Services.EmployeeServices.Interfaces;
 using EmployeeManagement.Models;
 using Microsoft.AspNetCore.Components;
+using EmployeeManagement.Utils.Exceptions;
 
 namespace EmployeeManagement.Components.Pages
 {
@@ -14,24 +15,16 @@ namespace EmployeeManagement.Components.Pages
         }
 
             private AddUserDto userDto = new AddUserDto();
-            
 
-           private async Task AddUser()
-            {
-        
-                Console.WriteLine($"Name: {userDto.Name}, Rg: {userDto.Rg}, Departament: {userDto.Departament}");
-           
 
-            if (string.IsNullOrWhiteSpace(userDto.Name) || string.IsNullOrWhiteSpace(userDto.Departament) || string.IsNullOrWhiteSpace(userDto.Rg))
-                return;
+        private async Task AddUser()
+        {
 
             await _employeeService.AddUser(userDto);
 
             StateHasChanged();
+        }
 
-            
-
-            }
 
     }
 }

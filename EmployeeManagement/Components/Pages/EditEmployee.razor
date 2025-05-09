@@ -1,0 +1,56 @@
+﻿@page "/EditEmployee"
+@rendermode InteractiveServer
+
+@if (exibirFormulario)
+{
+	<EditForm Model="@newUser" OnValidSubmit="FindUsers">
+
+		<div class="mb-2 w-25">
+			<label class="form-label">Digite o RG do usuario que deseja modificar:</label>
+			<InputText class="form-control" @bind-Value="newUser.Rg"></InputText>
+		</div>
+
+		<div class="mb-2 w-25">
+
+			<button class="btn btn-success" type="submit">Confirmar</button>
+		</div>
+
+	</EditForm>
+}
+else
+{
+    <div class="mb-2 w-50">
+
+        <EditForm Model="newUser" OnValidSubmit="EditUsers">
+
+            <div class="mb-2 w-50">
+                <label class="form-label">Write the new employee name:</label>
+                <InputText class="form-control" @bind-Value="newUser.Name"></InputText>
+            </div>
+
+            <div class="mb-2 w-50">
+                <label class="form-label">Write the new employee RG:</label>
+                <InputText class="form-control" @bind-Value="newUser.Rg"></InputText>
+            </div>
+
+            <div class="mb-2 w-50">
+                <label class="form-label">Write the new employee departament:</label>
+                <InputText class="form-control" @bind-Value="newUser.departament"></InputText>
+            </div>
+
+            <div class="mb-2 w-25">
+
+                <button class="btn btn-success" type="submit" onclick="@ReturnToHome">Confirmar</button>
+            </div>
+
+        </EditForm>
+       
+    </div>
+   
+}
+
+
+
+
+
+
